@@ -12,7 +12,7 @@ import {
 
 const ContactUs: React.FC = () => {
     return (
-        <section className="w-full bg-white py-16 px-6 md:px-20">
+        <section className="w-full bg-white py-16 px-4 sm:px-8 md:px-20">
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
                 {/* Left Side - Contact Info */}
                 <div className="flex-1">
@@ -22,7 +22,7 @@ const ContactUs: React.FC = () => {
                     <h2 className="text-3xl font-bold text-gray-800 mb-4">Contact Us</h2>
                     <p className="text-gray-500 mb-8 max-w-md">
                         If you need consultation with us, you can write a message or call us,
-                        we will respond as quickly as possible
+                        we will respond as quickly as possible.
                     </p>
 
                     {/* Contact Details */}
@@ -39,7 +39,7 @@ const ContactUs: React.FC = () => {
                             <FaClock className="text-blue-600 w-6 h-6" />
                             <span>Everyday : 08.00 - 21.00</span>
                         </div>
-                        <div className="flex items-center gap-4 text-gray-600">
+                        <div className="flex items-center gap-4 text-gray-600 break-words">
                             <FaMapMarkerAlt className="text-blue-600 w-6 h-6" />
                             <span>
                                 Jl. Raya Cihaluan No.112 Tangerang Selatan, Indonesia 41222
@@ -50,10 +50,10 @@ const ContactUs: React.FC = () => {
                     {/* Social Media */}
                     <div className="flex gap-3 mt-8">
                         {[
-                            { icon: <FaLinkedinIn size={16} />, href: "#" },
-                            { icon: <FaTwitter size={16} />, href: "#" },
-                            { icon: <FaFacebookF size={16} />, href: "#" },
-                            { icon: <FaInstagram size={16} />, href: "#" },
+                            { icon: <FaLinkedinIn />, href: "#" },
+                            { icon: <FaTwitter />, href: "#" },
+                            { icon: <FaFacebookF />, href: "#" },
+                            { icon: <FaInstagram />, href: "#" },
                         ].map((item, idx) => (
                             <a
                                 key={idx}
@@ -66,16 +66,26 @@ const ContactUs: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Right Side - Map Placeholder */}
-                <div className="flex-1 flex flex-col items-center">
-                    <div className="w-[610px] h-[447px] bg-gray-200 border border-gray-300 flex items-center justify-center text-gray-500 text-lg font-medium">
-                        Map Placeholder
+                {/* Right Side - Map Image */}
+                <div className="flex-1 flex flex-col items-start w-full">
+                    <div className="w-full max-w-lg overflow-hidden rounded-md">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224569.11690785276!2d76.82526905399862!3d28.42250187515182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19d582e38859%3A0x2cf5fe8e5c64b1e!2sGurugram%2C%20Haryana!5e0!3m2!1sen!2sin!4v1757071371011!5m2!1sen!2sin"
+                            width="600"
+                            height="450"
+                            style={{ border: "0" }}
+                            allowFullScreen
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                        />
                     </div>
 
                     {/* Office Center Map Button */}
-                    <button className="mt-6 self-start px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-400 text-white font-semibold rounded-lg shadow-lg hover:from-blue-700 hover:to-blue-500 transition duration-300">
-                        Office Center Map
-                    </button>
+                    <div className="w-full max-w-lg">
+                        <button className="mt-6 ml-4 px-5 sm:px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-400 text-white font-semibold rounded-lg shadow-lg hover:from-blue-700 hover:to-blue-500 transition duration-300">
+                            Office Center Map
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>

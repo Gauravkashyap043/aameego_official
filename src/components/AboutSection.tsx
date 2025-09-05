@@ -2,8 +2,8 @@ import React from "react";
 
 const AboutSection: React.FC = () => {
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-6 lg:px-20">
+    <section className="py-20 bg-white px-6 md:px-16 lg:px-28">
+      <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
           {/* Left Column - Text Content */}
           <div className="lg:col-span-2">
@@ -12,7 +12,8 @@ const AboutSection: React.FC = () => {
                 About Us
               </h3>
               <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-snug">
-                Karpragati: Empowering India's <br className="hidden sm:block" /> 
+                Karpragati: Empowering India's{" "}
+                <br className="hidden sm:block" />
                 Last-Mile Revolution
               </h2>
             </div>

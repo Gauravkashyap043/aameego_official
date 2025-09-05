@@ -50,7 +50,7 @@ const AdvantagesSection: React.FC = () => {
     <section className="bg-[#EFFFF8] py-16">
       <div className="max-w-6xl mx-auto px-6">
         {/* Heading */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-20">
           <h4 className="text-green-600 font-semibold tracking-wide uppercase mb-2">
             Advantages
           </h4>
